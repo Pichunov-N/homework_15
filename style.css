@@ -1,0 +1,43 @@
+#list{
+    list-style: none;
+}
+
+.error-colors{
+    border-color: red;
+    color: red;
+    border-radius: 3px;
+}
+
+input{
+    outline:none;
+}
+
+.delete_li{
+    cursor: pointer;
+    /* height: 10px; */
+    margin: 0px 10px 0px 0px;
+    border-radius: 20%;
+    border: 1px;
+    background-color: #0000004d;
+    color: #fefefe;
+    /* position: relative; */
+    /* top: -5px; */
+}
+
+/* .delete_li::after{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 7px;
+    margin: -3px 10px 3px;
+    border: solid rgb(53, 53, 53);
+    border-width: 0 1px 1px 0;
+    transform: rotate( 45deg);
+    position: absolute;
+    right: -7px;
+    top: 2px;
+} */
+
+/* .delete_li:hover{
+    background-color: #15313d5b;
+} */
