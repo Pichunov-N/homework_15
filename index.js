@@ -13,15 +13,7 @@ form.onsubmit = (event) => {
         input.classList.add('error-colors')
         errorMessage.classList.add('error-colors')
     } else errorMessage.innerHTML = '';
-    form.reset();
-}
 
-input.onfocus = function () {
-    input.classList.remove('error-colors')
-    // errorMessage.classList.remove('error-colors')
-}
-
-button.addEventListener('click', () => {
     const listItem = document.createElement('li');
     listItem.classList.add('li_item')
     listItem.innerHTML = input.value;
@@ -32,7 +24,17 @@ button.addEventListener('click', () => {
 
     listNode.append(listItem);
     listItem.prepend(deleteItem)
-})
+
+    form.reset();
+}
+
+input.onfocus = function () {
+    input.classList.remove('error-colors')
+    // errorMessage.classList.remove('error-colors')
+}
+
+// button.addEventListener('click', () => {
+// })
 
 listNode.addEventListener('click', (event) => {
     const closeButton = event.target.className === 'delete_li';
