@@ -12,29 +12,27 @@ form.onsubmit = (event) => {
         errorMessage.innerHTML = 'Напишите что-нибудь';
         input.classList.add('error-colors')
         errorMessage.classList.add('error-colors')
+        input.focus();
+        return
     } else errorMessage.innerHTML = '';
 
     const listItem = document.createElement('li');
-    listItem.classList.add('li_item')
+    listItem.classList.add('li_item');
     listItem.innerHTML = input.value;
 
     const deleteItem = document.createElement('button');
-    deleteItem.classList.add('delete_li')
-    deleteItem.innerHTML = 'del'
+    deleteItem.classList.add('delete_li');
+    deleteItem.innerHTML = 'del';
 
     listNode.append(listItem);
-    listItem.prepend(deleteItem)
+    listItem.prepend(deleteItem);
 
     form.reset();
 }
 
-input.onfocus = function () {
+input.oninput = function () {
     input.classList.remove('error-colors')
-    // errorMessage.classList.remove('error-colors')
 }
-
-// button.addEventListener('click', () => {
-// })
 
 listNode.addEventListener('click', (event) => {
     const closeButton = event.target.className === 'delete_li';
