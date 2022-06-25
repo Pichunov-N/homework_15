@@ -1,5 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
 #list{
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0;
 }
 
 .error-colors{
@@ -8,36 +16,58 @@
     border-radius: 3px;
 }
 
+.form-list {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px 0px 10px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
 input{
     outline:none;
 }
 
-.delete_li{
+form{
+    margin-bottom: 10px;
+}
+
+.li_item__delete{
     cursor: pointer;
-    /* height: 10px; */
-    margin: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 10px;
     border-radius: 20%;
     border: 1px;
     background-color: #0000004d;
     color: #fefefe;
-    /* position: relative; */
-    /* top: -5px; */
+    font-size: 10px;
+    max-height: 1rem;
 }
 
-/* .delete_li::after{
-    content: '';
-    display: inline-block;
-    width: 3px;
-    height: 7px;
-    margin: -3px 10px 3px;
-    border: solid rgb(53, 53, 53);
-    border-width: 0 1px 1px 0;
-    transform: rotate( 45deg);
-    position: absolute;
-    right: -7px;
-    top: 2px;
-} */
+.li_item{
+    width: 220px;
+    margin: 0px 0px 1px 0px;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-/* .delete_li:hover{
-    background-color: #15313d5b;
+.li_item__checkbox{
+    margin: 0px 10px 0px 0px;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+
+.li_item__delete:hover{
+    background-color: #2a6179;
+}
+
+/* .checked-row{
+    text-decoration: line-through;
 } */
