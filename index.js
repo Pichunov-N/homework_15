@@ -12,7 +12,7 @@ button.after(errorMessage);
 
 form.onsubmit = (event) => {
     event.preventDefault();
-    if (input.value === "") {
+    if (input.value.trim() === "") {
         errorMessage.innerHTML = 'Напишите что-нибудь';
         errorMessage.style.marginBottom = '-18px'
         input.classList.add('error-colors')
