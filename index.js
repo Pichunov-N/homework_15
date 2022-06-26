@@ -3,8 +3,11 @@ const input = document.querySelector('input');
 const button = document.querySelector('button');
 const listNode = document.getElementById('list');
 
+const submitButton = document.querySelector('button');
+submitButton.classList.add('submit_button');
+
 const errorMessage = document.createElement('div');
-errorMessage.classList.add('error-text')
+errorMessage.classList.add('error-text');
 button.after(errorMessage);
 
 form.onsubmit = (event) => {
@@ -23,7 +26,6 @@ form.onsubmit = (event) => {
 
     const listItem = document.createElement('li');
     listItem.classList.add('li_item');
-    // listItem.innerHTML = input.value;
 
     const itemText = document.createElement('span')
     itemText.classList.add('li_item__text')
@@ -31,23 +33,19 @@ form.onsubmit = (event) => {
 
     const deleteItem = document.createElement('button');
     deleteItem.classList.add('li_item__delete');
-    deleteItem.innerHTML = 'del';
+    deleteItem.innerHTML = 'X';
 
     const listItemCheckbox = document.createElement('input');
     listItemCheckbox.type = 'checkbox';
     listItemCheckbox.classList.add('li_item__checkbox')
 
-    listItemCheckbox.onclick = function (event) {
-        const checkedItem = event.target.className === 'li_item__checkbox'
-        if (checkedItem) {
-            const chosenItem = event.target.closest('.li_item');
-            chosenItem.style.textDecoration = 'line-through';
-            const chosenCheckbox = event.target.closest('.li_item__checkbox');
-            chosenCheckbox.setAttribute("disabled", "disabled");
+    listItemCheckbox.onchange = function (event) {
+        const chosenCheckbox = event.target.closest('.li_item__checkbox');
+        if (chosenCheckbox) {
+            itemText.style.textDecoration = 'line-through';
         }
-        console.log(event.target)
+        chosenCheckbox.setAttribute("disabled", "disabled");
     }
-
 
     listNode.append(listItem);
     listItem.append(itemText)

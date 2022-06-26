@@ -39,12 +39,19 @@ form{
 .li_item__delete{
     cursor: pointer;
     margin: 0px 0px 0px 10px;
-    border-radius: 20%;
+    padding: 0px 8px;
+    border-radius: 10%;
     border: 1px;
     background-color: #0000004d;
     color: #fefefe;
-    font-size: 10px;
+    font-size: 9px;
     max-height: 1rem;
+}
+.li_item__delete:hover{
+    background-color: #2a6179;
+}
+.li_item__delete:active{
+    background-color: #469dc2;
 }
 
 .li_item{
@@ -61,13 +68,5 @@ form{
     margin: 0px 10px 0px 0px;
     position: absolute;
     left: 0px;
-    top: 2px;
+    top: 3px;
 }
-
-.li_item__delete:hover{
-    background-color: #2a6179;
-}
-
-/* .checked-row{
-    text-decoration: line-through;
-} */
